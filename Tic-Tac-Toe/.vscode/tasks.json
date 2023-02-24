@@ -10,7 +10,6 @@
 				"-g",
 				"${file}",
 				"-o",
-				//"${fileDirname}/${fileBasenameNoExtension}"
 				"${workspaceFolder}/${fileBasenameNoExtension}"
 			],
 			"options": {
