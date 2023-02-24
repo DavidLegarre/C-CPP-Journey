@@ -1,16 +1,22 @@
-#include "rendering.hpp"
-#include <iostream>
+#include <rendering.hpp>
+#include <stdio.h>
 
-int main() {
+int main()
+{
     // Define Variables
     const int width = 3;
     const int height = 3;
 
     // Store the state of the board
-    //int *gamestate = new int[width*height];
-    int gamestate[height][width];
+    char gamestate[width*height];
+    
+    for (int i = 0; i < width*height; i++)
+    {
+        gamestate[i] = ' ';
+    }
 
-
+    // Draw the initial board
+    render(gamestate);
 
     return 0;
 }
