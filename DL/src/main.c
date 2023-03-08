@@ -1,22 +1,25 @@
 #include <stdio.h>
+// My libraries
 #include "lalgebra.h"
+#include "utils.h"
 
 int main()
 {
-    // Print 3 by 3 matrix
-    int A[3][3];
+    // Building my own 2 by 2 matrix
+    printf("Hello world\n");
+    mat *A = build_mat(2, 2);
 
-    int k = 1;
-    for (int i = 0; i < 3; i++)
+    double k = 1;
+    for (int i = 0; i < A->cols; i++)
     {
-        for (int j = 0; j < 3; j++)
+        for (int j = 0; j < A->rows; j++)
         {
-            A[i][j]=k;
+            A->data[i][j] = k;
             k++;
         }
     }
-    
-    print_mat(&A, 3, 3);
+
+    print_mat(A);
 
     return 0;
 }

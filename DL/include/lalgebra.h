@@ -1,3 +1,3 @@
+#include "utils.h"
 
-
-void print_mat(int* A, int rows, int cols);
+void print_mat(mat *A);
