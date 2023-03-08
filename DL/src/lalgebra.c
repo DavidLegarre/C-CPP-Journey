@@ -18,11 +18,11 @@ mat *dot_prod(mat *A, mat *B)
     mat *C = build_mat(A->rows, B->cols);
 
     // Operate
-    for (int i = 0; i < C->rows; i++)
+    for (size_t i = 0; i < C->rows; i++)
     {
-        for (int j = 0; j < C->cols; j++)
+        for (size_t j = 0; j < C->cols; j++)
         {
-            for (int k = 0; k < A->cols; k++)
+            for (size_t k = 0; k < A->cols; k++)
             {
                 C->data[i][j] += A->data[i][k]*B->data[k][j];
             }

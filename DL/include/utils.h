@@ -12,5 +12,6 @@ typedef struct matrix
 } mat;
 
 mat *build_mat(unsigned int rows, unsigned int cols);
+void print_mat(mat *A);
 
 #endif
