@@ -7,25 +7,19 @@ int main()
 {
     // Building my own 2 by 2 matrix
     printf("Hello world\n");
-    mat *A = build_mat(2, 2);
-    mat *B = build_mat(3, 2);
+    mat *A = build_mat(3, 2);
 
-    A->data[0][0] = 0;
-    A->data[0][1] = 1;
-    A->data[1][0] = 2;
-    A->data[1][1] = 3;
+    printf("Before:\n");
+    print_mat(A);
 
-    B->data[0][0] = 3;
-    B->data[0][1] = 2;
-    B->data[1][0] = 1;
-    B->data[1][1] = 0;
+    build_def(A);
 
-    mat *C = dot_prod(A, B);
+    printf("\nAfter:\n");
+    print_mat(A);
 
-    if (C)
-    {
-        print_mat(C);
-    }
+    A = Transpose(A);
+    printf("\nTransposed:\n");
+    print_mat(A);
 
     return 0;
 }

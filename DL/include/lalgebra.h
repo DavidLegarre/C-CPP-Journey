@@ -4,5 +4,6 @@
 #include "utils.h"
 
 mat *dot_prod(mat *A, mat *B);
+mat *Transpose(mat *A);
 
 #endif

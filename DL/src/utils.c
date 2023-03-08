@@ -21,6 +21,20 @@ mat *build_mat(unsigned int rows, unsigned int cols)
     
 }
 
+void build_def(mat *A)
+{
+    double k = 1;
+    for (size_t i = 0; i < A->rows; i++)
+    {
+        for (size_t j = 0; j < A->cols; j++)
+        {
+            A->data[i][j] = k;
+            k++;
+        }
+        
+    }
+}
+
 void print_mat(mat *A)
 {
     for (unsigned int i = 0; i < A->rows; i++)

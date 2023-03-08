@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include <stdio.h>
 // My libraries
 #include "utils.h"
@@ -31,4 +32,23 @@ mat *dot_prod(mat *A, mat *B)
 
     return C;
     
+}
+
+
+mat *Transpose(mat *A)
+{
+    // Allocate memory for the transposed matrix
+    mat *T = build_mat(A->cols, A->rows);
+
+    for (size_t i = 0; i < A->rows; i++)
+    {
+        for (size_t j = 0; j < A->cols; j++)
+        {
+            T->data[j][i] = A->data[i][j];
+        }
+        
+    }
+
+    free(A);
+    return T;    
 }
