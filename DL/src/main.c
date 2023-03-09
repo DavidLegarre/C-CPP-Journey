@@ -21,5 +21,9 @@ int main()
     printf("\nTransposed:\n");
     print_mat(A);
 
+    A = Transpose(A);
+    printf("\nTransposed again:\n");
+    print_mat(A);
+
     return 0;
 }
