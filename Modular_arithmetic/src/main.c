@@ -1,16 +1,30 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include "modular_arithmetic.h"
 
-int main(int argc, char const *argv[])
+int main()
 {
-    int base = 2;
-    int exp = 15;
-    int mod = 23;
+    int base;
+    int exp;
+    int mod;
+
+    printf("Base: ");
+    scanf("%d", &base);
+
+    printf("Exponent: ");
+    scanf("%d", &exp);
+
+    printf("Modulo: ");
+    scanf("%d", &mod);
 
     int result;
 
-    result = binary_exponentiation(base, exp, mod);
+    printf("base %d, exponent %d, modulo %d\n", base, exp, mod);
 
-    printf("%d^%d modulo %d = %d", base, exp, mod, result);
+    //result = binary_exponentiation(base, exp, mod);
+    result = binary_exp_steps(base, exp, mod);
+
+    printf("%d^%d modulo %d = %d\n", base, exp, mod, result);
 
     return 0;
 }
