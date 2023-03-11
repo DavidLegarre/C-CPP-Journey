@@ -4,27 +4,27 @@
 
 int main()
 {
-    int base;
-    int exp;
-    int mod;
+  int base;
+  int exp;
+  int mod;
 
-    printf("Base: ");
-    scanf("%d", &base);
+  printf("Base: ");
+  scanf("%d", &base);
 
-    printf("Exponent: ");
-    scanf("%d", &exp);
+  printf("Exponent: ");
+  scanf("%d", &exp);
 
-    printf("Modulo: ");
-    scanf("%d", &mod);
+  printf("Modulo: ");
+  scanf("%d", &mod);
 
-    int result;
+  int result;
 
-    printf("base %d, exponent %d, modulo %d\n", base, exp, mod);
+  printf("base %d, exponent %d, modulo %d\n", base, exp, mod);
 
-    //result = binary_exponentiation(base, exp, mod);
-    result = binary_exp_steps(base, exp, mod);
+  // result = binary_exponentiation(base, exp, mod);
+  result = binary_exp_steps(base, exp, mod);
 
-    printf("%d^%d modulo %d = %d\n", base, exp, mod, result);
+  printf("%d^%d = %d mod %d\n", base, exp, result, mod);
 
-    return 0;
+  return 0;
 }
