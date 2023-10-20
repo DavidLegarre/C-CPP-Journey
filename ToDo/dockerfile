@@ -1,0 +1,12 @@
+FROM gcc:latest
+
+WORKDIR /app
+
+COPY . /app
+
+
+#COPY ./makefile /app/makefile
+
+RUN make
+
+CMD ["./bin/inventory_management"]
