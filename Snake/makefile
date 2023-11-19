@@ -11,13 +11,13 @@ SOURCES=$(wildcard $(SRCDIR)/*.$(SRCEXT))
 OBJECTS=$(patsubst $(SRCDIR)/%, $(BUILDDIR)/%, $(SOURCES:.$(SRCEXT)=.o))
 
 $(TARGET): $(OBJECTS)
-    $(CXX) $(CXXFLAGS) -o $@ $^ $(SFML_LIBS)
+	$(CXX) $(CXXFLAGS) -o $@ $^ $(SFML_LIBS)
 
 $(BUILDDIR)/%.o: $(SRCDIR)/%.$(SRCEXT)
-    mkdir -p $(BUILDDIR)
-    $(CXX) $(CXXFLAGS) -c -o $@ $<
+	mkdir -p $(BUILDDIR)
+	$(CXX) $(CXXFLAGS) -c -o $@ $<
 
 clean:
-    $(RM) -r $(BUILDDIR) $(TARGET)
+	$(RM) -r $(BUILDDIR) $(TARGET)
 
 .PHONY: clean

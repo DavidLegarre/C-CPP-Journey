@@ -15,7 +15,7 @@ COPY makefile .
 
 # This command compiles your app using GCC, adjust for your source code
 # RUN g++ -o myapp main.cpp
-RUN make -f makefile
+RUN make
 
 # This command runs your application, comment out this line to compile only
 CMD ["./snake"]
