@@ -1,2 +1,0 @@
-make 
-./Tic-Tac-Toe
